@@ -1,0 +1,12 @@
+.navbar {
+  padding: 0.7em;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--light-green);
+}
+
+.navbar-items {
+  display: flex;
+  gap: 0.7em;
+}
