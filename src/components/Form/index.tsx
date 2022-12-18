@@ -1,11 +1,13 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
+import "./styles.css";
+
 type Inputs = {
   example: string;
   exampleRequired: string;
 };
 
-function Form() {
+function FormComponent() {
   const {
     register,
     handleSubmit,
@@ -16,14 +18,31 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input defaultValue="test" {...register("example")} />
+      <label>Technologies:</label>
+      <select>
+        <option value="react.js">React.js</option>
+        <option value="next.js">Next.js</option>
+        <option value="vue">Vue</option>
+        <option value="nuxt.js">Nuxt.js</option>
+        <option value="angular">Angular</option>
+        <option value="svelte">Svelte</option>
+        <option value="sveltekit">SvelteKit</option>
+        <option value="solid.js">Solid.js</option>
+        <option value="solidstart">Solid Start</option>
+        <option value="remix">Remix</option>
+        <option value="astro.js">Astro.js</option>
+      </select>
 
-      <input {...register("exampleRequired", { required: true })} />
-      {errors.exampleRequired && <span>This field is required</span>}
+      <label>Experience:</label>
+      <select>
+        <option value="junior">Junior</option>
+        <option value="semisenior">Semi-senior</option>
+        <option value="senior">Senior</option>
+      </select>
 
       <input type="submit" />
     </form>
   );
 }
 
-export default Form;
+export default FormComponent;
