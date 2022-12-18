@@ -1,0 +1,22 @@
+form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: center;
+
+  background-color: rgb(34, 94, 49);
+  color: #eee;
+}
+
+select {
+  border: none;
+  border-radius: 3px;
+  padding: 0.4em;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  padding: 0.4em;
+}
